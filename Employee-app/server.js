@@ -10,9 +10,19 @@ const allowedOrigins = [
     'https://emp-app-two.vercel.app'
 ]
 
-app.use(cors({
-    origin: allowedOrigins
-}))
+const corsOptions = {
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            return callback(null, true)
+        }
+
+        return callback(new Error('Not allowed by CORS'))
+    },
+    optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions))
+app.options('*', cors(corsOptions))
 
 config()
 
