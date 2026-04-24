@@ -1,6 +1,6 @@
 ###Create Employee
 
-POST http://localhost:5050/employee-api/employee
+POST https://emp-app-lqw3.onrender.com/employee-api/employee
 Content-Type: application/json
 
 {
@@ -13,10 +13,10 @@ Content-Type: application/json
 }
 
 ###read all employees
-GET http://localhost:5050/employee-api/employee
+GET https://emp-app-lqw3.onrender.com/employee-api/employee
 
 ### Edit employee
-PUT http://localhost:5050/employee-api/employee/69ca1bce3196c918f2de4b2a
+PUT https://emp-app-lqw3.onrender.com/employee-api/employee/69ca1bce3196c918f2de4b2a
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ### delete employee
-DELETE http://localhost:5050/employee-api/employee/69ca1bce3196c918f2de4b2a
+DELETE https://emp-app-lqw3.onrender.com/employee-api/employee/69ca1bce3196c918f2de4b2a

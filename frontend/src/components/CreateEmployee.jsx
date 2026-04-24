@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form"
 import {useState} from 'react'
 import { useNavigate } from "react-router"
 import {counterContextObj} from '../contexts/ContextProvider'
+import API_BASE_URL from '../api'
 
 import {useContext} from 'react'
 
@@ -17,7 +18,7 @@ function CreateEmployee() {
         //make post http
         try{
             setLoading(true)
-        let res = await fetch('http://localhost:5050/employee-api/employee',{
+        let res = await fetch(`${API_BASE_URL}/employee-api/employee`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify(newEmpObj)
